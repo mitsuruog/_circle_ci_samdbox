@@ -1,3 +1,7 @@
 test:
   override:
     - echo "here is test"
+    - |
+      if [ master == $CIRCLE_BRANCH ]; then
+        echo "here is test at master branch :)"
+      fi
